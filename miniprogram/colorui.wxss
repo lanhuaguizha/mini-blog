@@ -13,20 +13,20 @@ page {
 	/* Color 可以自定义相关配色 */
 	/* var属性兼容性 --> https://www.caniuse.com/#feat=css-variables */
 	/* 标准色 */
-	--red: #e54d42;
-	--orange: #f37b1d;
-	--yellow: #fbbd08;
-	--olive: #8dc63f;
-	--green: #39b54a;
-	--cyan: #1cbbb4;
-	--blue: #0081ff;
-	--purple: #6739b6;
-	--mauve: #9c26b0;
-	--pink: #e03997;
+	--red: #F44336;
+	--orange: #FF9800;
+	--yellow: #FFEB3B;
+	--olive: #8BC34A;
+	--green: #4CAF50;
+	--cyan: #009688;
+	--blue: #2196f3;
+	--purple: #673AB7;
+	--mauve: #9c27b0;
+	--pink: #E91E63;
 	--brown: #a5673f;
-	--grey: #8799a3;
+	--grey: #737373;
 	--black: #333333;
-	--darkGray: #666666;
+	--darkGray: #737373;
 	--gray: #aaaaaa;
 	--ghostWhite: #f1f1f1;
 	--white: #ffffff;
@@ -697,6 +697,24 @@ radio.white[checked] .wx-radio-input {
 	margin-right: initial;
 }
 
+.cu-btn-friend {
+	position: relative;
+	border: 0rpx;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	box-sizing: border-box;
+	padding: 0 30rpx;
+	font-size: 28rpx;
+	line-height: 1;
+	text-align: center;
+	text-decoration: none;
+	overflow: visible;
+	margin-left: initial;
+	transform: translate(0rpx, 0rpx);
+	margin-right: initial;
+}
+
 .cu-btn::after {
 	display: none;
 }
@@ -718,6 +736,23 @@ radio.white[checked] .wx-radio-input {
 	top: 0;
 	left: 0;
 	border: 1rpx solid currentColor;
+	transform: scale(0.5);
+	transform-origin: 0 0;
+	box-sizing: border-box;
+	border-radius: 12rpx;
+	z-index: 1;
+	pointer-events: none;
+}
+
+.cu-btn[class*="noline"]::after {
+	content: " ";
+	display: block;
+	width: 200%;
+	height: 200%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	border: 1rpx currentColor;
 	transform: scale(0.5);
 	transform-origin: 0 0;
 	box-sizing: border-box;
@@ -796,6 +831,21 @@ button.icon.lg {
  ==================== */
 
 .cu-tag {
+	font-size: 24rpx;
+	vertical-align: middle;
+	position: relative;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	box-sizing: border-box;
+	padding: 0rpx 30rpx;
+	height: 48rpx;
+	/* width: 170rpx; */
+	font-family: Helvetica Neue, Helvetica, sans-serif;
+	white-space: nowrap;
+}
+
+.cu-tag-nowidth {
 	font-size: 24rpx;
 	vertical-align: middle;
 	position: relative;
@@ -1234,7 +1284,7 @@ button.icon.lg {
 }
 
 .cu-list+.cu-list {
-	margin-top: 30rpx
+	/* margin-top: 30rpx */
 }
 
 .cu-list>.cu-item {
@@ -1268,9 +1318,10 @@ button.icon.lg {
 
 .cu-list.menu-avatar>.cu-item {
 	position: relative;
-	display: flex;
-	padding-right: 10rpx;
-	height: 140rpx;
+	/* display: flex; */
+	/* padding-right: 10rpx; */
+	/* height: 140rpx; */
+	padding: 30rpx 30rpx;
 	background-color: var(--white);
 	justify-content: flex-end;
 	align-items: center
@@ -1278,18 +1329,19 @@ button.icon.lg {
 
 .cu-list.menu-avatar>.cu-item>.cu-avatar {
 	position: absolute;
-	left: 30rpx
+	left: 60rpx
 }
 
 .cu-list.menu-avatar>.cu-item .flex .text-cut {
+	margin-top: 20rpx;
 	max-width: 510rpx
 }
 
 .cu-list.menu-avatar>.cu-item .content {
 	position: absolute;
-	left: 146rpx;
+	left: 186rpx;
 	width: calc(100% - 96rpx - 60rpx - 120rpx - 20rpx);
-	line-height: 1.6em;
+	/* line-height: 1.6em; */
 }
 
 .cu-list.menu-avatar>.cu-item .content.flex-sub {
@@ -1311,12 +1363,16 @@ button.icon.lg {
 }
 
 .cu-list.menu-avatar>.cu-item .action {
-	width: 100rpx;
-	text-align: center
+	/* width: 100rpx; */
+	margin-right: 30rpx;
+	text-align: right;
+font-size: 30rpx;
+/* display: flex; */
+align-items: center;
 }
 
 .cu-list.menu-avatar>.cu-item .action view+view {
-	margin-top: 10rpx
+	margin-top: 20rpx
 }
 
 .cu-list.menu-avatar.comment>.cu-item .content {
@@ -1338,7 +1394,7 @@ button.icon.lg {
 .cu-list.menu>.cu-item {
 	position: relative;
 	display: flex;
-	padding: 0 30rpx;
+	padding: 30rpx;
 	min-height: 100rpx;
 	background-color: var(--white);
 	justify-content: space-between;
@@ -1356,7 +1412,7 @@ button.icon.lg {
 	box-sizing: border-box;
 	width: 200%;
 	height: 200%;
-	border-bottom: 1rpx solid #ddd;
+	border-bottom: 0rpx solid #ddd;
 	border-radius: inherit;
 	content: " ";
 	transform: scale(.5);
@@ -1527,9 +1583,9 @@ button.icon.lg {
 
 .cu-list.card-menu {
 	overflow: hidden;
-	margin-right: 30rpx;
-	margin-left: 30rpx;
-	border-radius: 20rpx
+	/* margin-right: 30rpx;
+	margin-left: 30rpx; 
+	border-radius: 6rpx */
 }
 
 
@@ -1541,7 +1597,7 @@ button.icon.lg {
 	display: flex;
 	position: relative;
 	align-items: center;
-	min-height: 100rpx;
+	min-height: 90rpx;
 	justify-content: space-between;
 }
 
@@ -1681,7 +1737,7 @@ button.icon.lg {
 }
 
 .cu-bar .search-form {
-	background-color: #f5f5f5;
+	background-color: #ffffff;
 	line-height: 64rpx;
 	height: 64rpx;
 	font-size: 24rpx;
@@ -1689,7 +1745,11 @@ button.icon.lg {
 	flex: 1;
 	display: flex;
 	align-items: center;
+	/* right margin = 30 important value */
 	margin: 0 30rpx;
+	border-style: solid; 
+	border-color: white;
+	border-width: 1px;
 }
 
 .cu-bar .search-form+.action {
@@ -1727,7 +1787,7 @@ button.icon.lg {
 	width: 100%;
 	bottom: 0;
 	z-index: 1024;
-	box-shadow: 0 -1rpx 6rpx rgba(0, 0, 0, 0.1);
+	box-shadow: 0 rgb(255, 255, 255);
 }
 
 .cu-bar.tabbar {
@@ -1998,12 +2058,12 @@ button.icon.lg {
 	height: 90rpx;
 	display: inline-block;
 	line-height: 90rpx;
-	margin: 0 10rpx;
+	/* margin: 0 30rpx; */
 	padding: 0 20rpx;
 }
 
 .nav .cu-item.cur {
-	border-bottom: 4rpx solid;
+	border-bottom: 1px solid;
 }
 
 /* ==================
@@ -2291,9 +2351,33 @@ button.icon.lg {
 .cu-card.dynamic>.cu-item>.text-content {
 	padding: 0 30rpx 0;
 	max-height: 6.4em;
-	overflow: hidden;
+	/* overflow: hidden; */
 	font-size: 30rpx;
 	margin-bottom: 20rpx;
+
+	overflow: hidden;
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp: 2
+}
+
+.cu-card.dynamic>.cu-item>.text-content-friend {
+	padding: 0rpx 30rpx 0;
+	max-height: 6.4em;
+	/* overflow: hidden; */
+	font-size: 30rpx;
+	margin-bottom: 20rpx;
+
+	overflow: hidden;
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	/* -webkit-line-clamp: 2 */
+}
+
+.break {
+	overflow: hidden;
+	overflow-wrap: break-word;
+	word-break: break-all;
 }
 
 .cu-card.dynamic>.cu-item .square-img {
@@ -2304,8 +2388,20 @@ button.icon.lg {
 
 .cu-card.dynamic>.cu-item .only-img {
 	width: 100%;
-	height: 320rpx;
+	height: 290rpx;
 	border-radius: 6rpx;
+}
+
+.cu-card.dynamic>.cu-item .only-img-friend {
+	overflow: hidden;
+	/* margin: 30; */
+	/* padding-left: 30rpx;
+	padding-right: 30rpx; */
+	/* padding: 0 30rpx; */
+	width: 100%;
+	/* height: 500rpx; */
+	border-radius: 6rpx;
+	/* background-size: 100% 100%; */
 }
 
 .cu-card.article {
@@ -2345,7 +2441,7 @@ button.icon.lg {
 
 .cu-card.article>.cu-item .content .text-content {
 	font-size: 28rpx;
-	color: #888;
+	color: var(--gray);
 	height: 4.8em;
 	overflow: hidden;
 }
@@ -3840,6 +3936,10 @@ scroll-view.cu-steps .cu-item {
 
 .text-content {
 	line-height: 1.6;
+	overflow: hidden;
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp: 3;
 }
 
 .text-left {
@@ -3939,3 +4039,27 @@ scroll-view.cu-steps .cu-item {
 .lines-white {
 	color: var(--white);
 }
+
+
+/*stulus语法*/
+.img {
+    position:relative;
+    width:100%;
+    height:0;
+    padding-top: 100%; /*padding-bottom都可以*/
+    /* img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    } */
+  }
+
+  .view_hide {
+	display: none;
+  }
+  
+  .view_show {
+	display: block;
+  }

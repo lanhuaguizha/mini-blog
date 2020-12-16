@@ -1,5 +1,5 @@
 <!-- 设置列表 -->
-<view class="cu-bar bg-white solid-bottom margin-top">
+<view class="cu-bar bg-white solid-bottom">
     <view class='action'>
         <text class='cuIcon-titles text-orange '></text>
         标签列表
@@ -7,13 +7,13 @@
 </view>
 <view class="padding-sm flex flex-wrap">
     <view class="padding-xs" wx:for="{{labelList}}" wx:key="idx" wx:for-index="idx" wx:for-item="item" data-labelname="{{item.value}}" id="{{item._id}}" bindtap="showLabelRelatedModal" bindlongpress='deleteLabelById'>
-        <view class="cu-tag line-orange">{{item.value}}</view>
+        <view class="cu-tag line-orange round">{{item.value}}</view>
     </view>
 </view>
 <view class="box">
-    <view class="cu-bar btn-group foot">
-        <button class="cu-btn text-green line-green shadow" bindtap='goback'>返回</button>
-        <button class="cu-btn bg-green shadow-blur" bindtap='showLabelModal'>新增标签</button>
+    <view class="cu-bar btn-group foot bg-white">
+        <button class="cu-btn round line-blue" bindtap='goback'>返回</button>
+        <button class="cu-btn round bg-blue" bindtap='showLabelModal'>新增标签</button>
     </view>
 </view>
 <!-- 新增标签窗口 -->

@@ -1,3 +1,47 @@
+.VerticalNav.nav {
+  width: 200rpx;
+  white-space: initial;
+}
+
+.VerticalNav.nav .cu-item {
+  width: 100%;
+  text-align: center;
+  background-color: #f1f1f1;
+  margin: 0;
+  border: none;
+  height: 90rpx;
+  position: relative;
+  color : #737373;
+}
+
+.VerticalNav.nav .cu-item.cur {
+  background-color: #fff;
+  color : #2196f3;
+}
+.VerticalNav.nav .cu-item.cur::after {
+  content: "";
+  width: 4rpx;
+  height: 90rpx;
+  /* border-radius: 10rpx 10rpx 10rpx 10rpx; */
+  position: absolute;
+  background-color: currentColor;
+  top: 0;
+  left: 0rpx;
+  bottom: 0;
+  margin: auto;
+}
+.VerticalBox{
+  display: flex;
+}
+.VerticalMain{
+  background-color: #f1f1f1;
+}
+
+
+
+
+
+
 .cu-bar .content image{
   height: 60rpx;
   width: 240rpx;
@@ -38,3 +82,13 @@
   transform: skew(10deg, 0deg);
   opacity: 0.1;
 }
+
+
+
+
+
+
+
+
+
+

@@ -1,17 +1,17 @@
 /**
  * 打赏二维码
  */
-var moneyUrl ="https://7265-release-e00p3-1259243074.tcb.qcloud.la/qrcode_for_gh_182f5b861172_258.jpg?sign=911a1693a8e03a85d5b17183055f3448&t=1563501561"
+var moneyUrl = "cloud://release-e00p3.7265-release-e00p3-1259243074/微信图片_20190830100318.jpg"
 
 /**
  * 公众号二维码
  */
-var wechatUrl ="https://7265-release-e00p3-1259243074.tcb.qcloud.la/qrcode_for_gh_182f5b861172_258.jpg?sign=911a1693a8e03a85d5b17183055f3448&t=1563501561"
+var wechatUrl = "cloud://release-e00p3.7265-release-e00p3-1259243074/微信图片_20190830100311.jpg"
 
 /**
  * 云开发环境
  */
-var env ="release-e00p3"
+var env = "release-e00p3"
 /**
  * 个人文章操作枚举
  */
@@ -30,7 +30,7 @@ var postRelatedType = {
 
 module.exports = {
     postRelatedType: postRelatedType,
-    moneyUrl:moneyUrl,
-    wechatUrl:wechatUrl,
-    env:env
+    moneyUrl: moneyUrl,
+    wechatUrl: wechatUrl,
+    env: env
 }

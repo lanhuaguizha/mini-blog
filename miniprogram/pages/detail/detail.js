@@ -456,7 +456,7 @@ Page({
     }
     let posterConfig = {
       width: 750,
-      height: 1200,
+      height: 1050,
       backgroundColor: '#fff',
       debug: false
     }
@@ -493,16 +493,16 @@ Page({
         lineNum: 1
       },
       {
-        x: 32,
-        y: 113,
+        x: 38,
+        y: 133,
         baseLine: 'top',
-        text: '发现一篇很有意思的文章',
+        text: '正在读这篇文章',
         fontSize: 38,
         color: '#080808',
       },
       {
-        x: 59,
-        y: 770,
+        x: 38,
+        y: 580,
         baseLine: 'middle',
         text: that.data.post.title,
         fontSize: 38,
@@ -513,8 +513,8 @@ Page({
         lineHeight: 50
       },
       {
-        x: 59,
-        y: 875,
+        x: 38,
+        y: 675,
         baseLine: 'middle',
         text: that.data.post.digest,
         fontSize: 28,
@@ -525,9 +525,9 @@ Page({
       },
       {
         x: 315,
-        y: 1100,
+        y: 900,
         baseLine: 'top',
-        text: '长按识别小程序码,立即阅读',
+        text: '长按识别小程序码，立即阅读',
         fontSize: 28,
         color: '#929292',
       }
@@ -546,28 +546,28 @@ Page({
       {
         width: 62,
         height: 62,
-        x: 32,
-        y: 30,
+        x: 38,
+        y: 38,
         borderRadius: 62,
         url: that.data.userInfo.avatarUrl, //用户头像
       },
       {
-        width: 634,
-        height: 475,
-        x: 59,
-        y: 210,
+        width: 674,
+        height: 282,
+        x: 38,
+        y: 230,
         url: imageUrl,//海报主图
       },
       {
         width: 220,
         height: 220,
-        x: 70,
-        y: 1000,
+        x: 38,
+        y: 800,
         url: qrCodeUrl,//二维码的图
       }
     ];
 
-    posterConfig.blocks = blocks;//海报内图片的外框
+    // posterConfig.blocks = blocks;//海报内图片的外框
     posterConfig.texts = texts; //海报的文字
     posterConfig.images = images;
 
@@ -660,6 +660,20 @@ Page({
       url: '../detail/original?url=' + data
     })
   },
+  copy(e){
+    console.log(e,'长按复制')
+    var text = this.data.post.originalUrl
+    wx.setClipboardData({
+      	data: text,
+      	success: function (res) {
+        	wx.showToast({
+              title: '复制成功',
+              duration: 2000,
+              icon: 'none'
+        	});
+      	}
+    })
+},
   /**
    * towxml点击事件
    * @param {} e 

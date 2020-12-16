@@ -1,0 +1,196 @@
+<import src="../../../templates/nodata.wxml" />
+<!-- 搜索栏 -->
+<view class='box'>
+  <form bindsubmit='bindconfirm'>
+    <view class="cu-bar search bg-blue">
+      <view class='search-form round'>
+        <text class="cuIcon-search  text-grey"></text>
+        <input type="text" placeholder="搜索友圈" placeholder-class="text-grey" value="{{defaultSearchValue}}" name="searchContent" confirm-type="search"></input>
+      </view>
+      <view class='action'>
+        <button class='cu-btn line-white round' form-type='submit'>搜索</button>
+      </view>
+    </view>
+  </form>
+  <scroll-view scroll-x class="bg-white nav">
+    <view class="flex text-center">
+      <view wx:for="{{navItems}}" wx:for-index="idx" data-data="{{item}}" class="cu-item flex-sub {{item.index==tabCur?'text-blue cur':''}}" bindtap='tabSelect' data-id="{{item.index}}">
+        {{item.name}}
+      </view>
+    </view>
+  </scroll-view>
+</view>
+<!-- 文章列表 -->
+<!-- <view class="cu-list menu-avatar">
+  <view class="cu-item ">
+    <view class="cu-avatar round lg" style="background-image:url(https://ossweb-img.qq.com/images/lol/img/champion/Morgana.png);">
+      <view class="cu-tag badge {{index%2==0?'cuIcon-female bg-pink':'cuIcon-male bg-blue'}}"></view>
+    </view>
+    <view class="content">
+      <view class="text-pink">
+        <text class="text-cut">陶永强</text>
+      </view>
+      <view class="text-gray text-sm flex">
+        <text class="text-cut">yongqiang_tao</text>
+      </view>
+    </view>
+    <view class="action">
+      <view class="text-grey text-xs">22:20</view>
+      <view class="cu-tag-nowith round text-red sm">关注</view>
+    </view>
+  </view>
+  <view>ddddddddddddddd</view>
+</view> -->
+<view class="cu-card dynamic no-card">
+  <view wx:for="{{posts}}" wx:key="idx" wx:for-index="idx" wx:for-item="item" data-idx="{{idx}}" id="{{item._id}}" bindtap="bindPostDetail" class="cu-item shadow">
+    <!-- 1 -->
+    <view class="cu-list menu-avatar">
+      <view class="cu-item ">
+        <view class="cu-avatar round lg" style="background-image:url(https://ossweb-img.qq.com/images/lol/web201310/skin/big99008.jpg);" bindtap='toPreviewImage'>
+          <view class="cu-tag badge {{index%2==0?'cuIcon- bg-pink':'cuIcon- bg-blue'}}">{{index%2==0?'女':'男'}}</view>
+        </view>
+        <view class="content" bindtap='toPreviewImage'>
+          <view class="text-grey">
+            <text selectable="{{true}}" class="text-cut">陶永强（蚌埠）</text>
+          </view>
+          <view class="text-gray text-sm flex">
+            <text selectable="{{true}}" class="text-cut">yongqiang_tao</text>
+          </view>
+        </view>
+        <view class="action">
+          <view style="font-size: 30rpx;" class="text-grey">
+            22:20
+          </view>
+          <view style="font-size: 30rpx;" class="round line-blue">
+            <!-- <text class='cuIcon-friendadd'></text> -->
+            关注
+          </view>
+        </view>
+      </view>
+    </view>
+    <!-- 2 -->
+    <!-- <view class="text-cut ">{{item.title}}姓名</view>
+    <view class="text-cut ">{{item.title}}微信号</view> -->
+    <text selectable="{{true}}" style="padding-left: 60rpx; padding-right: 60rpx" class='text-content-friend break'>{{item.digest}}去吃早饭了dddddddddddddddddddddddddddddddddddddddddddddddddddddd</text>
+    <view class="content">
+      <view wx:for="{{posts}}" wx:key="idx" wx:for-index="idx">
+      <view style="padding-left: 30rpx; padding-right: 30rpx; margin-bottom: 20rpx"><image class='only-img-friend' src="https://ossweb-img.qq.com/images/lol/web201310/skin/big99008.jpg" mode="aspectFill" bindtap='toPreviewImage'></image></view>
+      </view>
+      <!-- <image src="{{item.defaultImageUrl}}" mode="aspectFill"></image> -->
+      <view class="desc">
+        <view>
+          <view style="font-size: 24rpx;" class='.cu-btn-friend round noline-{{item.isShow==1?"red":"blue"}} light text-blue margin-left margin-bottom' data-isshow="{{item.isShow}}" data-postid="{{item._id}}" catchtap='showModal'>
+            <text class='cuIcon-share text-blue padding-right-xs'></text>
+            {{item.isShow==1?"已分享":"分享"}}
+          </view>
+          <view style="font-size: 24rpx;" class='.cu-btn-friend round noline-{{item.classify==0?"red":"blue"}} light text-blue margin-bottom' data-classify="{{item.classify}}" data-postid="{{item._id}}" catchtap='showClassifyModal'>
+            <text class='cuIcon-comment text-blue padding-right-xs'></text>
+            {{item.classify==0?"已评论":"评论(30)"}}
+            <!-- <text class='text-green padding-left-xs'>30</text> -->
+          </view>
+          <view style="font-size: 24rpx;" class='.cu-btn-friend round noline-{{item.label.length==0?"red":"blue"}}  light text-blue margin-bottom' data-label="{{item.label}}" data-postid="{{item._id}}" catchtap='showLabelModal'>
+            <text class='cuIcon-appreciate text-blue padding-right-xs'></text>
+            {{item.label.length==0?"已点赞":"点赞(100)"}}
+          </view>
+          <!-- <view class='cu-btn round line-{{item.label.length==0?"red":"green"}}  light' data-label="{{item.label}}" data-postid="{{item._id}}" catchtap='showLabelModal'>
+            <text class='cuIcon-favor text-blue padding-right-xs'></text>
+            {{item.label.length==0?"已收藏":"收藏"}}
+          </view> -->
+          <view style="font-size: 24rpx;" class='.cu-btn-friend round noline-{{item.label.length==0?"red":"red"}}  light text-blue margin-bottom' data-label="{{item.label}}" data-postid="{{item._id}}" catchtap='showLabelModal'>
+            <text class='cuIcon-attentionforbid text padding-right-xs'></text>
+            {{item.label.length==0?"已举报2":"举报(2)"}}
+          </view>
+          <!-- <view class='cu-btn round line-red light' data-postid="{{item._id}}" catchtap='showDeleteModal'>
+            <text class='cuIcon-delete text-blue padding-right-xs'></text>
+            删除
+          </view> -->
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+<!-- 数据不存在 -->
+<view wx:if="{{nodata}}">
+  <template is="nodata" />
+</view>
+<!-- 悬浮新增按钮 -->
+<view class="round-click">
+  <navigator url='{{articlePath}}'>
+    <text class="cuIcon-write"></text>
+  </navigator>
+</view>
+<!-- 是否展示文章设置窗口 -->
+<view class="cu-modal {{isShowModel?'show':''}}">
+  <view class="cu-dialog">
+    <view class="cu-bar bg-white justify-end">
+      <view class='content'>{{showModelTitle}}</view>
+      <view class='action' bindtap='hideShowModal'>
+        <text class='cuIcon-close text-red'></text>
+      </view>
+    </view>
+    <view class='padding-xl'>{{showModelContent}}</view>
+    <view class="cu-bar bg-white">
+      <view class='action margin-0 flex-sub  solid-left' bindtap='hideShowModal'>取消</view>
+      <view class='action margin-0 flex-sub text-green solid-left' bindtap='saveShowModal'>确定</view>
+    </view>
+  </view>
+</view>
+<!-- 展示标签选项 -->
+<view class="cu-modal bottom-modal {{isShowLabelModel?'show':''}}" bindtap="hideLabelModal">
+  <view class="cu-dialog" catchtap>
+    <view class="cu-bar bg-white">
+      <view class="action text-grey" bindtap="hideLabelModal">取消</view>
+      <view class="action text-green" bindtap="saveLabelModal">提交</view>
+    </view>
+    <scroll-view class="VerticalNav nav" scroll-y scroll-with-animation scroll-top="{{0}}" style="height:calc(100vh - 800rpx)">
+      <view class="grid col-4 padding-sm">
+        <view class="padding-xs" wx:for="{{otherLabels}}" wx:key="idx" wx:for-index="idx" wx:for-item="item">
+          <button class="cu-btn orange block {{item.checked?'bg-orange':'line-orange'}}" bindtap="chooseLabelCheckbox" data-checked="{{item.checked}}" data-value="{{item.name}}">
+            {{item.name}}
+          </button>
+        </view>
+      </view>
+    </scroll-view>
+  </view>
+</view>
+<!-- 展示专题选项 -->
+<view class="cu-modal bottom-modal {{isShowClassifyModel?'show':''}}" bindtap="hideClassifyModal">
+  <view class="cu-dialog " catchtap>
+    <view class="cu-bar bg-white ">
+      <view class="action text-grey" bindtap="hideClassifyModal">取消</view>
+      <view class="action text-green" bindtap="saveClassifyModal">提交</view>
+    </view>
+    <scroll-view class="VerticalNav nav" scroll-y scroll-with-animation scroll-top="{{0}}" style="height:calc(100vh - 800rpx)">
+      <view class="cu-dialog">
+        <radio-group class="block" bindchange="radioClassifyChange">
+          <view class="cu-list menu text-left">
+            <view class="cu-item" wx:for="{{classifyList}}" wx:key="idx" wx:for-index="idx" wx:for-item="item" id="{{item._id}}">
+              <label class="flex justify-between align-center flex-sub">
+                <view class="flex-sub">{{item.name}}</view>
+                <radio checked="{{item.checked}}" value="{{item.name}}" class="round"></radio>
+              </label>
+            </view>
+          </view>
+        </radio-group>
+      </view>
+    </scroll-view>
+  </view>
+</view>
+<!-- 删除文章设置窗口 -->
+<view class="cu-modal {{isShowDeleteModel?'show':''}}">
+  <view class="cu-dialog">
+    <view class="cu-bar bg-white justify-end">
+      <view class='content'>删除文章</view>
+      <view class='action' bindtap='hideShowDeleteModal'>
+        <text class='cuIcon-close text-red'></text>
+      </view>
+    </view>
+    <view class='padding-xl'>是否确认删除文章，删除后将无法恢复</view>
+    <view class="cu-bar bg-white">
+      <view class='action margin-0 flex-sub  solid-left' bindtap='hideShowDeleteModal'>取消</view>
+      <view class='action margin-0 flex-sub text-green solid-left' bindtap='deleteShowModal'>
+        确定
+      </view>
+    </view>
+  </view>
+</view>

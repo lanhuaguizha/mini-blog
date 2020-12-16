@@ -56,6 +56,9 @@ exports.main = async (event, context) => {
     case 'getClassifyList': {
       return getClassifyList(event)
     }
+    case 'getClassifyArticleList': {
+      return getClassifyArticleList(event)
+    }
     case 'deletePostById': {
       return deletePostById(event)
     }
@@ -356,6 +359,44 @@ async function getClassifyList(event) {
     const promise = db.collection('mini_config').where({
       key: 'basePostsClassify'
     }).skip(i * MAX_LIMIT).limit(MAX_LIMIT).get()
+    tasks.push(promise)
+  }
+  // 等待所有
+  return (await Promise.all(tasks)).reduce((acc, cur) => {
+    return {
+      data: acc.data.concat(cur.data),
+      errMsg: acc.errMsg,
+    }
+  })
+}
+
+/**
+ * 获取所有文章label集合
+ * @param {*} event 
+ */
+async function getClassifyArticleList(event) {
+  const MAX_LIMIT = 100
+  const countResult = await db.collection('mini_config').where({
+    key: event.key
+    // key: 'article'
+  }).count()
+  const total = countResult.total
+  if (total === 0) {
+    return {
+      data: [],
+      errMsg: "no classify data",
+    }
+  }
+  // 计算需分几次取
+  const batchTimes = Math.ceil(total / 100)
+  // 承载所有读操作的 promise 的数组
+  const tasks = []
+  for (let i = 0; i < batchTimes; i++) {
+    const promise = db.collection('mini_config').where({
+      key: event.key
+    })
+    .orderBy('timestamp', 'asc')
+    .skip(i * MAX_LIMIT).limit(MAX_LIMIT).get()
     tasks.push(promise)
   }
   // 等待所有

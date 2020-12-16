@@ -572,6 +572,19 @@ function getClassifyList() {
 /**
  * 获取label集合
  */
+function getClassifyArticleList(key) {
+    return wx.cloud.callFunction({
+        name: 'adminService',
+        data: {
+            action: "getClassifyArticleList",
+            key: key
+        }
+    })
+}
+
+/**
+ * 获取label集合
+ */
 function updateBatchPostsClassify(classify,operate,posts) {
     return wx.cloud.callFunction({
         name: 'adminService',
@@ -652,6 +665,7 @@ module.exports = {
     changeCommentFlagById: changeCommentFlagById,
     getLabelList: getLabelList,
     getClassifyList: getClassifyList,
+    getClassifyArticleList: getClassifyArticleList,
     getNewPostsList: getNewPostsList,
     deletePostById: deletePostById,
     uploadFile: uploadFile,

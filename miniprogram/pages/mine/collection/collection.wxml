@@ -1,8 +1,8 @@
 <import src="../../../templates/nodata.wxml" />
-<scroll-view scroll-x class="bg-white nav fixed">
+<scroll-view scroll-x class="bg-white nav">
   <view class='flex text-center'>
     <block wx:for="{{navItems}}" wx:for-index="idx" data-data="{{item}}">
-      <view class="cu-item flex-sub {{item.index==tabCur?'text-green cur':''}}" bindtap='tabSelect' data-id="{{item.index}}">
+      <view class="cu-item flex-sub {{item.index==tabCur?'text-blue cur':''}}" bindtap='tabSelect' data-id="{{item.index}}">
         {{item.name}}
       </view>
     </block>
@@ -11,8 +11,8 @@
 
 <!--文章列表-->
 <view class="cu-card article no-card margin-top-self">
-  <view wx:for="{{postRelated}}"  wx:key="idx" wx:for-index="idx" wx:for-item="item" data-idx="{{idx}}" id="{{item.postId}}" bindtap="bindPostDetail"  class="cu-item shadow solids-bottom">
-    <view class="title text-cut ">{{item.postTitle}}</view>
+  <view wx:for="{{postRelated}}"  wx:key="idx" wx:for-index="idx" wx:for-item="item" data-idx="{{idx}}" id="{{item.postId}}" bindtap="bindPostDetail"  class="cu-item shadow">
+    <view class="padding text-cut">{{item.postTitle}}</view>
     <view class="content">
       <image src="{{item.postUrl}}" mode="aspectFill"></image>
       <view class="desc">

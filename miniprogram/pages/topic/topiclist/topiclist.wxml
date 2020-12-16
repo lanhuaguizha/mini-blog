@@ -1,20 +1,20 @@
 <import src="../../../templates/nodata.wxml" />
-<!-- 文章列表 -->
+<!-- 专题 文章列表 -->
 <view class="cu-card article no-card">
-  <view wx:for="{{posts}}" wx:key="idx" wx:for-index="idx" wx:for-item="item" data-idx="{{idx}}" id="{{item._id}}" bindtap="bindPostDetail" class="cu-item shadow solids-bottom">
-    <view class="title text-cut ">{{item.title}}</view>
+  <view wx:for="{{posts}}" wx:key="idx" wx:for-index="idx" wx:for-item="item" data-idx="{{idx}}" id="{{item._id}}" bindtap="bindPostDetail" class="cu-item shadow">
+    <view class="padding text-cut ">{{item.title}}</view>
     <view class="content">
       <image src="{{item.defaultImageUrl}}" mode="aspectFill"></image>
       <view class="desc">
-        <view class='text-content '>{{item.digest}}</view>
+        <view class='text-content'>{{item.digest}}</view>
         <view class="text-gray">
-          <text class="cuIcon-timefill"></text>
+          <text class="cuIcon-time"></text>
           {{item.createTime}}
-          <text class="cuIcon-attentionfill" />
+          <text class="cuIcon-attention" />
           {{item.totalVisits}}
-          <text class="cuIcon-appreciatefill" />
+          <text class="cuIcon-appreciate" />
           {{item.totalZans}}
-          <text class="cuIcon-messagefill" />
+          <text class="cuIcon-comment" />
           {{item.totalComments}}
         </view>
       </view>

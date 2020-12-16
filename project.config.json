@@ -7,6 +7,7 @@
 		"postcss": true,
 		"minified": true,
 		"newFeature": true,
+		"coverView": true,
 		"nodeModules": true,
 		"autoAudits": false,
 		"uglifyFileName": false,
@@ -17,7 +18,9 @@
 			"ignore": [],
 			"disablePlugins": [],
 			"outputPath": ""
-		}
+		},
+		"useCompilerModule": true,
+		"userConfirmedUseCompilerModuleSwitch": false
 	},
 	"appid": "wx4c104802b5bafa28",
 	"projectname": "mini-blog",

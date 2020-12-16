@@ -1,0 +1,43 @@
+<!-- <view class=''>
+    <view class='' wx:for='{{imgArr}}'>
+        <image mode="aspectFill" style="width: 100%" src='{{item}}' data-index='{{index}}' bindtap='previewImg'></image>
+    </view>
+</view> -->
+<view class="bg-white">
+    <view class="flex padding justify-center">
+        <view class="cu-avatar xl margin-top-xl round" style="background-image:url({{userInfo.avatarUrl}});"></view>
+    </view>
+    <view class="flex padding justify-center">
+        <view>{{userInfo.nickName}}</view>
+    </view>
+</view>
+<view class="cu-list menu margin-top shadow-lg">
+    <view class="cu-item arrow">
+        <button class='cu-btn content' bindtap='bindCollect'>
+            <text class='cuIcon-male text-blue'></text>
+            <text class='text-grey'>性别</text>
+            <text class='text-gray' style="position:fixed;right: 0;">男</text>
+        </button>
+    </view>
+    <view class="cu-item arrow">
+        <button class='cu-btn content' bindtap='bindCollect'>
+            <text class='cuIcon-profile text-blue'></text>
+            <text class='text-grey'>姓名</text>
+            <text class='text-gray' style="position:fixed;right: 0;">陶永强</text>
+        </button>
+    </view>
+    <view class="cu-item arrow">
+        <button class='cu-btn content' bindtap='bindZan'>
+            <text class='cuIcon-weixin text-blue'></text>
+            <text class='text-grey'>微信号</text>
+            <text class='text-gray' style="position:fixed;right: 0;">yongqiang_tao</text>
+        </button>
+    </view>
+    <view class="cu-item arrow">
+        <button class='cu-btn content' bindtap='bindZan'>
+            <text class='cuIcon-location text-blue'></text>
+            <text class='text-grey'>地区</text>
+            <text class='text-gray' style="position:fixed;right: 0;">蚌埠</text>
+        </button>
+    </view>
+</view>

@@ -2,6 +2,9 @@
   "pages": [
     "pages/index/index",
     "pages/topic/topic",
+    "pages/friend/friend",
+    "pages/previewProfile/previewProfile",
+    "pages/editor/editor",
     "pages/mine/mine",
     "pages/topic/topiclist/topiclist",
     "pages/detail/detail",
@@ -17,16 +20,17 @@
     "pages/detail/original"
   ],
   "window": {
+    "pageOrientation":"auto",
     "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "基督徒APP",
-    "navigationBarTextStyle": "black"
+    "navigationBarBackgroundColor": "#2196f3",
+    "navigationBarTextStyle":"white",
+    "navigationBarTitleText": "文章详情"
   },
   "tabBar": {
-    "color": "#959394",
-    "selectedColor": "#1296db",
-    "backgroundColor": "#fff",
-    "borderStyle": "black",
+    "color": "#737373",
+    "selectedColor": "#2196f3",
+    "backgroundColor": "#ffffff",
+    "borderStyle": "white",
     "list": [
       {
         "pagePath": "pages/index/index",
@@ -34,7 +38,18 @@
         "selectedIconPath": "/images/tab/index_clicked.png",
         "text": "首页"
       },
-    
+      { 
+        "pagePath": "pages/topic/topic", 
+        "iconPath": "/images/tab/function.png", 
+        "selectedIconPath": "/images/tab/function_clicked.png", 
+        "text": "专题" 
+      },
+      {
+        "pagePath": "pages/friend/friend",
+        "iconPath": "/images/tab/friend.png",
+        "selectedIconPath": "/images/tab/friend_clicked.png",
+        "text": "友圈"
+      }, 
       {
         "pagePath": "pages/mine/mine",
         "iconPath": "/images/tab/mine.png",
