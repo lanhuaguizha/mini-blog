@@ -71,10 +71,10 @@
     <!-- 2 -->
     <!-- <view class="text-cut ">{{item.title}}姓名</view>
     <view class="text-cut ">{{item.title}}微信号</view> -->
-    <text selectable="{{true}}" style="padding-left: 60rpx; padding-right: 60rpx" class='text-content-friend break'>{{item.digest}}去吃早饭了dddddddddddddddddddddddddddddddddddddddddddddddddddddd</text>
+    <text selectable="{{true}}" style="padding-left: 60rpx; padding-right: 60rpx" class='text-content-friend break'>{{item.digest}}去吃早饭了</text>
     <view class="content">
       <view wx:for="{{posts}}" wx:key="idx" wx:for-index="idx">
-      <view style="padding-left: 30rpx; padding-right: 30rpx; margin-bottom: 20rpx"><image class='only-img-friend' src="https://ossweb-img.qq.com/images/lol/web201310/skin/big99008.jpg" mode="aspectFill" bindtap='toPreviewImage'></image></view>
+      <view style="padding-left: 30rpx; padding-right: 30rpx; margin-bottom: 20rpx"><image class='only-img-friend' src="https://tse1-mm.cn.bing.net/th/id/OIP.KUnFCdoy3lQlm9OayPykQwDIEs?pid=Api&rs=1" mode="widthFix" bindtap='toPreviewImage'></image></view>
       </view>
       <!-- <image src="{{item.defaultImageUrl}}" mode="aspectFill"></image> -->
       <view class="desc">

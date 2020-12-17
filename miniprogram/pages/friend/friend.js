@@ -1,7 +1,7 @@
 Page({
     data: {
         articlePath: "../editor/editor",
-        posts: [1, 2, 3]
+        posts: [1]
     },
     // 跳转到图片预览界面
     toPreviewImage: function (e) {
