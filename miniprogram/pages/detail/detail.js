@@ -29,7 +29,7 @@ Page({
     nodata_str: "暂无评论，赶紧抢沙发吧",
     isShowPosterModal: false,//是否展示海报弹窗
     posterImageUrl: "",//海报地址
-    showBanner:true
+    showBanner: true
   },
 
   /**
@@ -535,11 +535,16 @@ Page({
 
     let imageUrl = that.data.post.defaultImageUrl
     imageUrl = imageUrl.replace('http://', 'https://')
-    let qrCode = await api.getReportQrCodeUrl(that.data.post.qrCode);
-    let qrCodeUrl = qrCode.fileList[0].tempFileURL
-    if (qrCodeUrl == "") {
+    let qrCodeUrl = ""
+    // 逻辑为：
+    // 1. qrCode为空，为文章生成qrCode
+    // 2. qrCode不为空，直接通过文章id取出qrCode的Url
+    if (that.data.post.qrCode == undefined) {
       let addReult = await api.addPostQrCode(that.data.post._id, that.data.post.timestamp)
       qrCodeUrl = addReult.result[0].tempFileURL
+    } else {
+      let qrCode = await api.getReportQrCodeUrl(that.data.post.qrCode);
+      qrCodeUrl = qrCode.fileList[0].tempFileURL
     }
     console.info(qrCodeUrl)
     var images = [
@@ -660,20 +665,20 @@ Page({
       url: '../detail/original?url=' + data
     })
   },
-  copy(e){
-    console.log(e,'长按复制')
+  copy(e) {
+    console.log(e, '长按复制')
     var text = this.data.post.originalUrl
     wx.setClipboardData({
-      	data: text,
-      	success: function (res) {
-        	wx.showToast({
-              title: '复制成功',
-              duration: 2000,
-              icon: 'none'
-        	});
-      	}
+      data: text,
+      success: function (res) {
+        wx.showToast({
+          title: '复制成功',
+          duration: 2000,
+          icon: 'none'
+        });
+      }
     })
-},
+  },
   /**
    * towxml点击事件
    * @param {} e 
@@ -693,13 +698,13 @@ Page({
   adError(err) {
     console.log('Banner 广告加载失败', err)
     this.setData({
-      showBanner:false
+      showBanner: false
     })
   },
   adClose() {
     console.log('Banner 广告关闭')
     this.setData({
-      showBanner:false
+      showBanner: false
     })
   }
 })

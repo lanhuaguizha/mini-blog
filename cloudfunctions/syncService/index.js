@@ -188,7 +188,7 @@ async function getCacheAccessToken(type) {
  */
 async function getAccessWechatToken() {
   const result = await rp({
-    url: `https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential&appId=${APPID}&secret=${APPSCREAT}`,
+    url: `https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential&appId=${process.env.AppId}&secret=${process.env.AppSecret}`,
     method: 'GET'
   });
 

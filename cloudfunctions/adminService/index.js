@@ -12,7 +12,7 @@ cloud.init()
 // 云函数入口函数
 exports.main = async (event, context) => {
   //admin服务都要验证一下权限
-  if (event.action !== 'checkAuthor' && event.action !== 'getLabelList' && event.action !== 'getClassifyList') {
+  if (event.action !== 'checkAuthor' && event.action !== 'getLabelList' && event.action !== 'getClassifyList' && event.action !== 'getClassifyArticleList') {
     let result = await checkAuthor(event)
     if (!result) {
       return false;

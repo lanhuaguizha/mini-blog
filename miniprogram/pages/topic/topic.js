@@ -42,10 +42,10 @@ Page({
     // }
     await this.getClassifyList()
 
-    this.setData({
-      list: list,
-      listCur: list[0]
-    })
+    // this.setData({
+      // list: list,
+      // listCur: list[0]
+    // })
   },
   /**
      * 页面相关事件处理函数--监听用户下拉动作
@@ -93,8 +93,8 @@ Page({
       api.getClassifyArticleList("shopping")
     ]);
 
-    // console.info(articleList)
-    // console.info(bookList)
+    console.info(articleList)
+    console.info(bookList)
 
     that.setData({
       classifyList1: articleList.result.data,
