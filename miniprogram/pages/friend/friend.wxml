@@ -7,9 +7,6 @@
         <text class="cuIcon-search  text-grey"></text>
         <input type="text" placeholder="搜索友圈" placeholder-class="text-grey" value="{{defaultSearchValue}}" name="searchContent" confirm-type="search"></input>
       </view>
-      <view class='action'>
-        <button class='cu-btn line-white round' form-type='submit'>搜索</button>
-      </view>
     </view>
   </form>
   <scroll-view scroll-x class="bg-white nav">

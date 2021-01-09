@@ -34,7 +34,7 @@
             </view>
         </view>
         <form bindsubmit="formClassifySubmit" report-submit="true">
-            <view class='padding-sm'>
+            <view class=''>
                 <view class="cu-form-group text-left">
                     <view class='title'>专题名称:</view>
                     <input placeholder="请填写名称" class='radius' name='classifyName' value='{{classifyName}}'></input>
@@ -45,8 +45,8 @@
             </view>
             <view class="cu-bar bg-white justify-end">
                 <view class='action'>
-                    <button class='cu-btn' bindtap='hideClassifyModal'>取消</button>
-                    <button form-type="submit" class='cu-btn margin-left bg-green'>保存</button>
+                    <button class='cu-btn line-blue round' bindtap='hideClassifyModal'>取消</button>
+                    <button form-type="submit" class='cu-btn margin-left bg-blue round'>保存</button>
                 </view>
             </view>
         </form>

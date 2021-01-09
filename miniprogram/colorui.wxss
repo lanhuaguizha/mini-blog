@@ -2588,7 +2588,7 @@ align-items: center;
 	width: 680rpx;
 	max-width: 100%;
 	background-color: #f8f8f8;
-	border-radius: 10rpx;
+	border-radius: 6rpx;
 	overflow: hidden;
 }
 

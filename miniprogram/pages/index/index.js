@@ -25,77 +25,79 @@ Page({
     hotItems: ["浏览最多", "评论最多", "点赞最多", "收藏最多"],
     hotCur: 0,
     labelList: [
-      { _id: "9a393e025e7715490017cfa96bb449cb", key: "basePostsLabels", timestamp: 1584862537480, value: "kotlin-native" },
-      { _id: "9a393e025e7715490017cfa96bb449cb", key: "basePostsLabels", timestamp: 1584862537480, value: "kotlin-jvm" },
-      { _id: "9a393e025e7715490017cfa96bb449cb", key: "basePostsLabels", timestamp: 1584862537480, value: "kotlin-js" },
-      { _id: "9a393e025e7715490017cfa96bb449cb", key: "basePostsLabels", timestamp: 1584862537480, value: "创世记" },
-      { _id: "9a393e025e7715490017cfa96bb449cb", key: "basePostsLabels", timestamp: 1584862537480, value: "出埃及记" },
-      { _id: "9a393e025e7715490017cfa96bb449cb", key: "basePostsLabels", timestamp: 1584862537480, value: "利未记" },
-      { _id: "9a393e025e7715490017cfa96bb449cb", key: "basePostsLabels", timestamp: 1584862537480, value: "民数记" },
-      { _id: "9a393e025e7715490017cfa96bb449cb", key: "basePostsLabels", timestamp: 1584862537480, value: "申命记" },
-      { _id: "9a393e025e7715490017cfa96bb449cb", key: "basePostsLabels", timestamp: 1584862537480, value: "约书亚记" },
-      { _id: "9a393e025e7715490017cfa96bb449cb", key: "basePostsLabels", timestamp: 1584862537480, value: "士师记" },
-      { _id: "9a393e025e7715490017cfa96bb449cb", key: "basePostsLabels", timestamp: 1584862537480, value: "路得记" },
-      { _id: "9a393e025e7715490017cfa96bb449cb", key: "basePostsLabels", timestamp: 1584862537480, value: "撒母耳记上" },
-      { _id: "9a393e025e7715490017cfa96bb449cb", key: "basePostsLabels", timestamp: 1584862537480, value: "撒母耳记下" },
-      { _id: "9a393e025e7715490017cfa96bb449cb", key: "basePostsLabels", timestamp: 1584862537480, value: "列王记上" },
-      { _id: "9a393e025e7715490017cfa96bb449cb", key: "basePostsLabels", timestamp: 1584862537480, value: "列王记下" },
-      { _id: "9a393e025e7715490017cfa96bb449cb", key: "basePostsLabels", timestamp: 1584862537480, value: "历代志上" },
-      { _id: "9a393e025e7715490017cfa96bb449cb", key: "basePostsLabels", timestamp: 1584862537480, value: "历代志下" },
-      { _id: "9a393e025e7715490017cfa96bb449cb", key: "basePostsLabels", timestamp: 1584862537480, value: "以斯拉记" },
-      { _id: "9a393e025e7715490017cfa96bb449cb", key: "basePostsLabels", timestamp: 1584862537480, value: "尼希米记" },
-      { _id: "9a393e025e7715490017cfa96bb449cb", key: "basePostsLabels", timestamp: 1584862537480, value: "以斯帖记" },
-      { _id: "9a393e025e7715490017cfa96bb449cb", key: "basePostsLabels", timestamp: 1584862537480, value: "约伯记" },
-      { _id: "9a393e025e7715490017cfa96bb449cb", key: "basePostsLabels", timestamp: 1584862537480, value: "诗篇" },
-      { _id: "9a393e025e7715490017cfa96bb449cb", key: "basePostsLabels", timestamp: 1584862537480, value: "箴言" },
-      { _id: "9a393e025e7715490017cfa96bb449cb", key: "basePostsLabels", timestamp: 1584862537480, value: "传道书" },
-      { _id: "9a393e025e7715490017cfa96bb449cb", key: "basePostsLabels", timestamp: 1584862537480, value: "雅歌" },
-      { _id: "9a393e025e7715490017cfa96bb449cb", key: "basePostsLabels", timestamp: 1584862537480, value: "以赛亚书" },
-      { _id: "9a393e025e7715490017cfa96bb449cb", key: "basePostsLabels", timestamp: 1584862537480, value: "耶利米书" },
-      { _id: "9a393e025e7715490017cfa96bb449cb", key: "basePostsLabels", timestamp: 1584862537480, value: "耶利米哀歌" },
-      { _id: "9a393e025e7715490017cfa96bb449cb", key: "basePostsLabels", timestamp: 1584862537480, value: "以西结书" },
-      { _id: "9a393e025e7715490017cfa96bb449cb", key: "basePostsLabels", timestamp: 1584862537480, value: "但以理书" },
-      { _id: "9a393e025e7715490017cfa96bb449cb", key: "basePostsLabels", timestamp: 1584862537480, value: "何西阿书" },
-      { _id: "9a393e025e7715490017cfa96bb449cb", key: "basePostsLabels", timestamp: 1584862537480, value: "约珥书" },
-      { _id: "9a393e025e7715490017cfa96bb449cb", key: "basePostsLabels", timestamp: 1584862537480, value: "阿摩司书" },
-      { _id: "9a393e025e7715490017cfa96bb449cb", key: "basePostsLabels", timestamp: 1584862537480, value: "俄巴底亚书" },
-      { _id: "9a393e025e7715490017cfa96bb449cb", key: "basePostsLabels", timestamp: 1584862537480, value: "约拿书" },
-      { _id: "9a393e025e7715490017cfa96bb449cb", key: "basePostsLabels", timestamp: 1584862537480, value: "弥迦书" },
-      { _id: "9a393e025e7715490017cfa96bb449cb", key: "basePostsLabels", timestamp: 1584862537480, value: "那鸿书" },
-      { _id: "9a393e025e7715490017cfa96bb449cb", key: "basePostsLabels", timestamp: 1584862537480, value: "哈巴谷书" },
-      { _id: "9a393e025e7715490017cfa96bb449cb", key: "basePostsLabels", timestamp: 1584862537480, value: "西番雅书" },
-      { _id: "9a393e025e7715490017cfa96bb449cb", key: "basePostsLabels", timestamp: 1584862537480, value: "哈该书" },
-      { _id: "9a393e025e7715490017cfa96bb449cb", key: "basePostsLabels", timestamp: 1584862537480, value: "撒迦利亚书" },
-      { _id: "9a393e025e7715490017cfa96bb449cb", key: "basePostsLabels", timestamp: 1584862537480, value: "玛拉基书" },
-      { _id: "9a393e025e7715490017cfa96bb449cb", key: "basePostsLabels", timestamp: 1584862537480, value: "马太福音" },
-      { _id: "9a393e025e7715490017cfa96bb449cb", key: "basePostsLabels", timestamp: 1584862537480, value: "马可福音" },
-      { _id: "9a393e025e7715490017cfa96bb449cb", key: "basePostsLabels", timestamp: 1584862537480, value: "路加福音" },
-      { _id: "9a393e025e7715490017cfa96bb449cb", key: "basePostsLabels", timestamp: 1584862537480, value: "约翰福音" },
-      { _id: "9a393e025e7715490017cfa96bb449cb", key: "basePostsLabels", timestamp: 1584862537480, value: "使徒行传" },
-      { _id: "9a393e025e7715490017cfa96bb449cb", key: "basePostsLabels", timestamp: 1584862537480, value: "罗马书" },
-      { _id: "9a393e025e7715490017cfa96bb449cb", key: "basePostsLabels", timestamp: 1584862537480, value: "哥林多前书" },
-      { _id: "9a393e025e7715490017cfa96bb449cb", key: "basePostsLabels", timestamp: 1584862537480, value: "哥林多后书" },
-      { _id: "9a393e025e7715490017cfa96bb449cb", key: "basePostsLabels", timestamp: 1584862537480, value: "加拉太书" },
-      { _id: "9a393e025e7715490017cfa96bb449cb", key: "basePostsLabels", timestamp: 1584862537480, value: "以弗所书" },
-      { _id: "9a393e025e7715490017cfa96bb449cb", key: "basePostsLabels", timestamp: 1584862537480, value: "腓立比书" },
-      { _id: "9a393e025e7715490017cfa96bb449cb", key: "basePostsLabels", timestamp: 1584862537480, value: "歌罗西书" },
-      { _id: "9a393e025e7715490017cfa96bb449cb", key: "basePostsLabels", timestamp: 1584862537480, value: "帖撒罗尼迦前书" },
-      { _id: "9a393e025e7715490017cfa96bb449cb", key: "basePostsLabels", timestamp: 1584862537480, value: "帖撒罗尼迦后书" },
-      { _id: "9a393e025e7715490017cfa96bb449cb", key: "basePostsLabels", timestamp: 1584862537480, value: "提摩太前书" },
-      { _id: "9a393e025e7715490017cfa96bb449cb", key: "basePostsLabels", timestamp: 1584862537480, value: "提摩太后书" },
-      { _id: "9a393e025e7715490017cfa96bb449cb", key: "basePostsLabels", timestamp: 1584862537480, value: "提多书" },
-      { _id: "9a393e025e7715490017cfa96bb449cb", key: "basePostsLabels", timestamp: 1584862537480, value: "腓利门书" },
-      { _id: "9a393e025e7715490017cfa96bb449cb", key: "basePostsLabels", timestamp: 1584862537480, value: "希伯来书" },
-      { _id: "9a393e025e7715490017cfa96bb449cb", key: "basePostsLabels", timestamp: 1584862537480, value: "雅各书" },
-      { _id: "9a393e025e7715490017cfa96bb449cb", key: "basePostsLabels", timestamp: 1584862537480, value: "彼得前书" },
-      { _id: "9a393e025e7715490017cfa96bb449cb", key: "basePostsLabels", timestamp: 1584862537480, value: "彼得后书" },
-      { _id: "9a393e025e7715490017cfa96bb449cb", key: "basePostsLabels", timestamp: 1584862537480, value: "约翰一书" },
-      { _id: "9a393e025e7715490017cfa96bb449cb", key: "basePostsLabels", timestamp: 1584862537480, value: "约翰二书" },
-      { _id: "9a393e025e7715490017cfa96bb449cb", key: "basePostsLabels", timestamp: 1584862537480, value: "约翰三书" },
-      { _id: "9a393e025e7715490017cfa96bb449cb", key: "basePostsLabels", timestamp: 1584862537480, value: "犹大书" },
-      { _id: "9a393e025e7715490017cfa96bb449cb", key: "basePostsLabels", timestamp: 1584862537480, value: "启示录" }
+      { _id: "all", key: "basePostsLabels", timestamp: 1584862537480, value: "全部" },
+      { _id: "kotlin-native", key: "basePostsLabels", timestamp: 1584862537480, value: "kotlin-native" },
+      { _id: "kotlin-jvm", key: "basePostsLabels", timestamp: 1584862537480, value: "kotlin-jvm" },
+      { _id: "kotlin-js", key: "basePostsLabels", timestamp: 1584862537480, value: "kotlin-js" },
+      { _id: "gen", key: "basePostsLabels", timestamp: 1584862537480, value: "创世记" },
+      { _id: "exo", key: "basePostsLabels", timestamp: 1584862537480, value: "出埃及记" },
+      { _id: "lev", key: "basePostsLabels", timestamp: 1584862537480, value: "利未记" },
+      { _id: "num", key: "basePostsLabels", timestamp: 1584862537480, value: "民数记" },
+      { _id: "deu", key: "basePostsLabels", timestamp: 1584862537480, value: "申命记" },
+      { _id: "jos", key: "basePostsLabels", timestamp: 1584862537480, value: "约书亚记" },
+      { _id: "jug", key: "basePostsLabels", timestamp: 1584862537480, value: "士师记" },
+      { _id: "rut", key: "basePostsLabels", timestamp: 1584862537480, value: "路得记" },
+      { _id: "sa1", key: "basePostsLabels", timestamp: 1584862537480, value: "撒母耳记上" },
+      { _id: "sa2", key: "basePostsLabels", timestamp: 1584862537480, value: "撒母耳记下" },
+      { _id: "ki1", key: "basePostsLabels", timestamp: 1584862537480, value: "列王记上" },
+      { _id: "ki2", key: "basePostsLabels", timestamp: 1584862537480, value: "列王记下" },
+      { _id: "ch1", key: "basePostsLabels", timestamp: 1584862537480, value: "历代志上" },
+      { _id: "ch2", key: "basePostsLabels", timestamp: 1584862537480, value: "历代志下" },
+      { _id: "ezr", key: "basePostsLabels", timestamp: 1584862537480, value: "以斯拉记" },
+      { _id: "neh", key: "basePostsLabels", timestamp: 1584862537480, value: "尼希米记" },
+      { _id: "est", key: "basePostsLabels", timestamp: 1584862537480, value: "以斯帖记" },
+      { _id: "job", key: "basePostsLabels", timestamp: 1584862537480, value: "约伯记" },
+      { _id: "psm", key: "basePostsLabels", timestamp: 1584862537480, value: "诗篇" },
+      { _id: "pro", key: "basePostsLabels", timestamp: 1584862537480, value: "箴言" },
+      { _id: "ecc", key: "basePostsLabels", timestamp: 1584862537480, value: "传道书" },
+      { _id: "son", key: "basePostsLabels", timestamp: 1584862537480, value: "雅歌" },
+      { _id: "isa", key: "basePostsLabels", timestamp: 1584862537480, value: "以赛亚书" },
+      { _id: "jer", key: "basePostsLabels", timestamp: 1584862537480, value: "耶利米书" },
+      { _id: "lam", key: "basePostsLabels", timestamp: 1584862537480, value: "耶利米哀歌" },
+      { _id: "eze", key: "basePostsLabels", timestamp: 1584862537480, value: "以西结书" },
+      { _id: "dan", key: "basePostsLabels", timestamp: 1584862537480, value: "但以理书" },
+      { _id: "hos", key: "basePostsLabels", timestamp: 1584862537480, value: "何西阿书" },
+      { _id: "joe", key: "basePostsLabels", timestamp: 1584862537480, value: "约珥书" },
+      { _id: "amo", key: "basePostsLabels", timestamp: 1584862537480, value: "阿摩司书" },
+      { _id: "oba", key: "basePostsLabels", timestamp: 1584862537480, value: "俄巴底亚书" },
+      { _id: "jon", key: "basePostsLabels", timestamp: 1584862537480, value: "约拿书" },
+      { _id: "mic", key: "basePostsLabels", timestamp: 1584862537480, value: "弥迦书" },
+      { _id: "nah", key: "basePostsLabels", timestamp: 1584862537480, value: "那鸿书" },
+      { _id: "hab", key: "basePostsLabels", timestamp: 1584862537480, value: "哈巴谷书" },
+      { _id: "zep", key: "basePostsLabels", timestamp: 1584862537480, value: "西番雅书" },
+      { _id: "hag", key: "basePostsLabels", timestamp: 1584862537480, value: "哈该书" },
+      { _id: "zec", key: "basePostsLabels", timestamp: 1584862537480, value: "撒迦利亚书" },
+      { _id: "mal", key: "basePostsLabels", timestamp: 1584862537480, value: "玛拉基书" },
+      { _id: "mat", key: "basePostsLabels", timestamp: 1584862537480, value: "马太福音" },
+      { _id: "mak", key: "basePostsLabels", timestamp: 1584862537480, value: "马可福音" },
+      { _id: "luk", key: "basePostsLabels", timestamp: 1584862537480, value: "路加福音" },
+      { _id: "jhn", key: "basePostsLabels", timestamp: 1584862537480, value: "约翰福音" },
+      { _id: "act", key: "basePostsLabels", timestamp: 1584862537480, value: "使徒行传" },
+      { _id: "rom", key: "basePostsLabels", timestamp: 1584862537480, value: "罗马书" },
+      { _id: "co1", key: "basePostsLabels", timestamp: 1584862537480, value: "哥林多前书" },
+      { _id: "co2", key: "basePostsLabels", timestamp: 1584862537480, value: "哥林多后书" },
+      { _id: "gal", key: "basePostsLabels", timestamp: 1584862537480, value: "加拉太书" },
+      { _id: "eph", key: "basePostsLabels", timestamp: 1584862537480, value: "以弗所书" },
+      { _id: "phl", key: "basePostsLabels", timestamp: 1584862537480, value: "腓立比书" },
+      { _id: "col", key: "basePostsLabels", timestamp: 1584862537480, value: "歌罗西书" },
+      { _id: "ts1", key: "basePostsLabels", timestamp: 1584862537480, value: "帖撒罗尼迦前书" },
+      { _id: "ts2", key: "basePostsLabels", timestamp: 1584862537480, value: "帖撒罗尼迦后书" },
+      { _id: "ti1", key: "basePostsLabels", timestamp: 1584862537480, value: "提摩太前书" },
+      { _id: "ti2", key: "basePostsLabels", timestamp: 1584862537480, value: "提摩太后书" },
+      { _id: "tit", key: "basePostsLabels", timestamp: 1584862537480, value: "提多书" },
+      { _id: "mon", key: "basePostsLabels", timestamp: 1584862537480, value: "腓利门书" },
+      { _id: "heb", key: "basePostsLabels", timestamp: 1584862537480, value: "希伯来书" },
+      { _id: "jas", key: "basePostsLabels", timestamp: 1584862537480, value: "雅各书" },
+      { _id: "pe1", key: "basePostsLabels", timestamp: 1584862537480, value: "彼得前书" },
+      { _id: "pe2", key: "basePostsLabels", timestamp: 1584862537480, value: "彼得后书" },
+      { _id: "jn1", key: "basePostsLabels", timestamp: 1584862537480, value: "约翰一书" },
+      { _id: "jn2", key: "basePostsLabels", timestamp: 1584862537480, value: "约翰二书" },
+      { _id: "jn3", key: "basePostsLabels", timestamp: 1584862537480, value: "约翰三书" },
+      { _id: "jud", key: "basePostsLabels", timestamp: 1584862537480, value: "犹大书" },
+      { _id: "rev", key: "basePostsLabels", timestamp: 1584862537480, value: "启示录" }
     ],
     labelCur: "全部",
+    labelId: "all",
     whereItem: ['', 'createTime', '']//下拉查询条件
   },
 
@@ -105,6 +107,7 @@ Page({
   onLoad: async function (options) {
     wx.setStorageSync("hotCur", 0)
     wx.setStorageSync('labelCur', "全部")
+    wx.setStorageSync('labelId', "all")
     await this.getPostsList('', 'createTime')
   },
   /**
@@ -398,9 +401,9 @@ Page({
 
     let that = this
     let hotCur = 0;
-    if (wx.getStorageSync("hotCur") == undefined || fromTab) {
+    if (wx.getStorageSync("hotCur") == undefined || fromTab) {//表示点击tab走这里
       hotCur = wx.getStorageSync("hotCur")
-    } else {
+    } else { //表示点击label走这里
       hotCur = e.currentTarget.dataset.id
     }
 
@@ -446,20 +449,6 @@ Page({
     hotSelectedId = hotCur
   },
 
-  tap() {
-    let that = this;
-    for (let i = 0; i < that.data.labelList.length; i++) {
-      if (that.data.labelList[i].value === that.data.labelCur) {
-        that.setData({
-          // labelCur: that.data.labelList[i].value,
-          scrollLeft: (i + 1) * (180 * (wx.getSystemInfoSync().windowWidth / 750))
-          // scrollLeft: (i + 1) * 74
-        })
-        break
-      }
-    }
-  },
-
   /**
    * 标签按钮切换
    * @param {*} e 
@@ -468,16 +457,20 @@ Page({
 
     let that = this;
     let labelCur = "全部"
-    if (wx.getStorageSync('labelCur') === undefined || e.currentTarget.dataset.id == 3) {
+    let labelId = "all"
+    if (wx.getStorageSync('labelCur') === undefined || e.currentTarget.dataset.id == 3) { //点击tab会走这里
       labelCur = wx.getStorageSync('labelCur')
-    } else {
-      labelCur = e.currentTarget.dataset.id;
+      labelId = wx.getStorageSync('labelId')
+    } else { //点击label会走这里
+      labelCur = e.currentTarget.dataset.id.value;
+      labelId = e.currentTarget.dataset.id._id
     }
     if (labelSelected == labelCur && e.currentTarget.dataset.id != 3) return
 
     that.setData({
       posts: [],
       labelCur: labelCur,
+      labelId: labelId,
       defaultSearchValue: "",
       page: 1,
       nomore: false,
@@ -487,9 +480,9 @@ Page({
 
     await that.getPostsList("", "createTime", labelCur == "全部" ? "" : labelCur)
 
-    wx.setStorageSync('labelCur', labelCur)
+    wx.setStorageSync('labelCur', labelCur)//表示更新标签的存储值的逻辑。在labelCur = wx.getStorageSync('labelCur')代码里会取出来用
+    wx.setStorageSync('labelId', labelId)
     labelSelected = labelCur
-    that.tap();
   },
   /**
    * 获取文章列表

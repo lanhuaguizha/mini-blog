@@ -30,9 +30,9 @@ async function syncWechatPosts(isUpdate) {
   let accessToken = await getCacheAccessToken(1)
   var offset = parseInt(configData.value.currentOffset);
   let maxCount = parseInt(configData.value.maxSyncCount);
-  var count = 10
+  var count = 2
   var isContinue = true
-  while (isContinue) {
+  while (offset === 0) {
     var posts = await getWechatPosts(accessToken, offset, count)
     console.info(posts.item.length)
     if (posts.item.length == 0) {

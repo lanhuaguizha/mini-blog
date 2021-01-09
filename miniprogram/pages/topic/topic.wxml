@@ -151,7 +151,7 @@
         </view>
       </view>
     </view>
-    <view class="" id="main-3">
+    <!-- <view class="" id="main-3">
       <view class="cu-list menu card-menu" wx:for="{{classifyList4}}" wx:key="idx" wx:for-index="idx" wx:for-item="item" data-tname="{{item.value.classifyName}}" bindtap='openTopicPosts'>
         <view class="cu-item">
           <view class="">
@@ -198,8 +198,8 @@
           </view>
         </view>
       </view>
-    </view>
-    <view class="" style="padding-bottom: calc(100vh)" id="main-6">
+    </view> -->
+    <view class="" style="padding-bottom: calc(100vh)" id="main-3">
       <view class="cu-list menu card-menu" wx:for="{{classifyList7}}" wx:key="idx" wx:for-index="idx" wx:for-item="item" data-tname="{{item.value.classifyName}}" bindtap='openTopicPosts'>
         <view class="cu-item">
           <view class="">

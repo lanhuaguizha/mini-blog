@@ -13,7 +13,7 @@ Page({
     TabCur: 0,
     MainCur: 0,
     VerticalNavTop: 0,
-    list: [{ id: 0, name: "文章" }, { id: 1, name: "书籍" }, { id: 2, name: "视频" }, { id: 3, name: "图片" }, { id: 4, name: "音乐" }, { id: 5, name: "电影" }, { id: 6, name: "购物"}],
+    list: [{ id: 0, name: "文章" }, { id: 1, name: "书籍" }, { id: 2, name: "视频" }, { id: 3, name: "购物"}],
     load: true,
     classifyList: [],
     classifyList1: [],
