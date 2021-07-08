@@ -1429,6 +1429,7 @@ align-items: center;
 }
 
 .cu-list.menu>.cu-item.arrow {
+	height: 1rpx;
 	padding-right: 90rpx
 }
 
@@ -1485,7 +1486,7 @@ align-items: center;
 
 .cu-list.menu>.cu-item .content {
 	font-size: 30rpx;
-	line-height: 1.6em;
+	/* line-height: 1.6em; */
 	flex: 1
 }
 
@@ -1563,8 +1564,8 @@ align-items: center;
 }
 
 .cu-list.grid.no-border>.cu-item {
-	padding-top: 10rpx;
-	padding-bottom: 20rpx
+	padding-top: 0rpx;
+	padding-bottom: 0rpx
 }
 
 .cu-list.grid.no-border>.cu-item:after {
@@ -2452,7 +2453,7 @@ align-items: center;
 
 .cu-form-group {
 	background-color: var(--white);
-	padding: 1rpx 30rpx;
+	padding: 0rpx 30rpx;
 	display: flex;
 	align-items: center;
 	min-height: 100rpx;
@@ -2461,6 +2462,7 @@ align-items: center;
 
 .cu-form-group+.cu-form-group {
 	border-top: 1rpx solid #eee;
+	padding: 30rpx 30rpx;
 }
 
 .cu-form-group .title {
@@ -3050,7 +3052,7 @@ scroll-view.cu-steps .cu-item {
 
 .grid.grid-square>view {
 	margin-right: 20rpx;
-	margin-bottom: 20rpx;
+	/* margin-bottom: 20rpx; */
 	border-radius: 6rpx;
 	position: relative;
 	overflow: hidden;

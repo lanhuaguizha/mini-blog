@@ -13,7 +13,7 @@ Page({
     TabCur: 0,
     MainCur: 0,
     VerticalNavTop: 0,
-    list: [{ id: 0, name: "文章" }, { id: 1, name: "书籍" }, { id: 2, name: "视频" }, { id: 3, name: "购物"}],
+    list: [{ id: 0, name: "文章" }, { id: 1, name: "书籍" }, { id: 2, name: "视频" }, { id: 3, name: "电影" }],
     load: true,
     classifyList: [],
     classifyList1: [],
@@ -30,10 +30,10 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: async function (options) {
-    wx.showLoading({
-      title: '加载中...',
-      mask: true
-    });
+    // wx.showLoading({
+    //   title: '加载中...',
+    //   mask: true
+    // });
     // let list = [{}];
     // for (let i = 0; i < 4; i++) {
     //   list[i] = {};
@@ -43,8 +43,8 @@ Page({
     await this.getClassifyList()
 
     // this.setData({
-      // list: list,
-      // listCur: list[0]
+    // list: list,
+    // listCur: list[0]
     // })
   },
   /**
@@ -83,30 +83,23 @@ Page({
     // let movieList = await api.getClassifyArticleList("movie")
     // let shoppingList = await api.getClassifyArticleList("shopping")
 
-    const [articleList, bookList, videoList, pictureList, musicList, movieList, shoppingList] = await Promise.all([
+    const [articleList, bookList, videoList, movieList] = await Promise.all([
       api.getClassifyArticleList("article"),
       api.getClassifyArticleList("book"),
       api.getClassifyArticleList("video"),
-      api.getClassifyArticleList("picture"),
-      api.getClassifyArticleList("music"),
-      api.getClassifyArticleList("movie"),
-      api.getClassifyArticleList("shopping")
+      api.getClassifyArticleList("movie")
     ]);
 
-    console.info(articleList)
-    console.info(bookList)
 
     that.setData({
       classifyList1: articleList.result.data,
       classifyList2: bookList.result.data,
       classifyList3: videoList.result.data,
-      classifyList4: pictureList.result.data,
-      classifyList5: musicList.result.data,
-      classifyList6: movieList.result.data,
-      classifyList7: shoppingList.result.data
+      classifyList4: movieList.result.data
+    }, function () {
+      wx.hideLoading()
     })
 
-    wx.hideLoading()
   },
 
   /**
@@ -120,9 +113,9 @@ Page({
     })
   },
 
-  onReady() {
-    wx.hideLoading()
-  },
+  // onReady() {
+  //   wx.hideLoading()
+  // },
   tabSelect(e) {
     this.setData({
       TabCur: e.currentTarget.dataset.id,

@@ -108,11 +108,11 @@
         <view class="cu-item {{!item.value.hide?'view_show':'view_hide'}}">
           <view class="">
             <view style="line-height: 1.6;font-size: 30rpx">
-              <text class="cuIcon-title text-orange padding-left"></text>
+              <text class="cuIcon-titles text-orange padding-left"></text>
               {{item.value.classifyName}}
             </view>
             <view class="text-gray text-sm margin-top-sm padding-left">
-              <text class="cuIcon-new" />
+              <text class="cuIcon-post" />
               {{item.value.classifyDesc}}
             </view>
           </view>
@@ -124,7 +124,7 @@
         <view class="cu-item">
           <view class="">
             <view style="line-height: 1.6;font-size: 30rpx">
-              <text class="cuIcon-title text-orange padding-left "></text>
+              <text class="cuIcon-titles padding-left "></text>
               {{item.value.classifyName}}
             </view>
             <view class="text-gray text-sm margin-top-sm padding-left">
@@ -140,7 +140,7 @@
         <view class="cu-item">
           <view class="">
             <view style="line-height: 1.6;font-size: 30rpx">
-              <text class="cuIcon-title text-orange padding-left "></text>
+              <text class="cuIcon-titles text-blue padding-left "></text>
               {{item.value.classifyName}}
             </view>
             <view class="text-gray text-sm margin-top-sm padding-left">
@@ -200,15 +200,15 @@
       </view>
     </view> -->
     <view class="" style="padding-bottom: calc(100vh)" id="main-3">
-      <view class="cu-list menu card-menu" wx:for="{{classifyList7}}" wx:key="idx" wx:for-index="idx" wx:for-item="item" data-tname="{{item.value.classifyName}}" bindtap='openTopicPosts'>
+      <view class="cu-list menu card-menu" wx:for="{{classifyList4}}" wx:key="idx" wx:for-index="idx" wx:for-item="item" data-tname="{{item.value.classifyName}}" bindtap='openTopicPosts'>
         <view class="cu-item">
           <view class="">
             <view style="line-height: 1.6;font-size: 30rpx">
-              <text class="cuIcon-title text-orange padding-left "></text>
+              <text class="cuIcon-titles text-grey padding-left "></text>
               {{item.value.classifyName}}
             </view>
             <view class="text-gray text-sm margin-top-sm padding-left">
-              <text class="cuIcon-goodsnew" />
+              <text class="cuIcon-record" />
               {{item.value.classifyDesc}}
             </view>
           </view>

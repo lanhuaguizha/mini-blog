@@ -6,6 +6,7 @@
   <view class="flex padding justify-center">
     <view>{{userInfo.nickName}}</view>
   </view>
+  
 </view>
 <view class="cu-list menu margin-top shadow-lg">
   <view class="cu-item arrow">

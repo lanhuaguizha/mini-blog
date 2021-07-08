@@ -375,7 +375,7 @@ async function getClassifyList(event) {
  * @param {*} event 
  */
 async function getClassifyArticleList(event) {
-  const MAX_LIMIT = 100
+  const MAX_LIMIT = 10
   const countResult = await db.collection('mini_config').where({
     key: event.key
     // key: 'article'
@@ -388,7 +388,7 @@ async function getClassifyArticleList(event) {
     }
   }
   // 计算需分几次取
-  const batchTimes = Math.ceil(total / 100)
+  const batchTimes = Math.ceil(total / 10)
   // 承载所有读操作的 promise 的数组
   const tasks = []
   for (let i = 0; i < batchTimes; i++) {
